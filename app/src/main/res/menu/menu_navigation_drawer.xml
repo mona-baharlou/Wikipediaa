@@ -18,6 +18,11 @@
         android:icon="@drawable/video_maker"
         android:title="Be a video maker" />
 
+    <item
+        android:id="@+id/menu_translator"
+        android:icon="@drawable/translate"
+        android:title="Be a translator" />
+
     <item android:title="Our Websites">
         <menu>
             <item
