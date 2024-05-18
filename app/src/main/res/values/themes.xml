@@ -12,7 +12,7 @@
 
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
 
-
+        <item name="fontFamily">@font/sans_reg</item>
     </style>
 
     <style name="Theme.Wikipediaa" parent="Base.Theme.Wikipediaa" />
