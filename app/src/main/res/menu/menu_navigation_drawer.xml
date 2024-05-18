@@ -18,13 +18,19 @@
         android:icon="@drawable/video_maker"
         android:title="Be a video maker" />
 
-    <item
-        android:id="@+id/menu_open_wikipedia"
-        android:icon="@drawable/wikipedia"
-        android:title="Visit Wikipedia" />
+    <item android:title="Our Websites">
+        <menu>
+            <item
+                android:id="@+id/menu_open_wikipedia"
+                android:icon="@drawable/wikipedia"
+                android:title="Visit Wikipedia" />
 
-    <item
-        android:id="@+id/menu_open_wikimedia"
-        android:icon="@drawable/wikimedia"
-        android:title="Visit Wikimedia" />
+            <item
+                android:id="@+id/menu_open_wikimedia"
+                android:icon="@drawable/wikimedia"
+                android:title="Visit Wikimedia" />
+        </menu>
+    </item>
+
+
 </menu>
