@@ -21,8 +21,6 @@ class ExploreAdapter(private val data: ArrayList<ItemPost>) :
                 .load(itemPost.imgUrl)
                 .into(binding.imgExploreMain)
 
-
-
             binding.txtExploreTitle.text = itemPost.title
             binding.txtExploreSubtitle.text = itemPost.subtitle
             binding.txtExploreDetail.text = itemPost.detail
