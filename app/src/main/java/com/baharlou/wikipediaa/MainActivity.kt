@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.GravityCompat
 import com.baharlou.wikipediaa.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
 
                 R.id.menu_writer -> {
-
+                    binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
                 }
 
                 R.id.menu_photographer -> {
