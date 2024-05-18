@@ -69,13 +69,13 @@ class MainActivity : AppCompatActivity() {
         )
 
         binding.drawerLayoutMain.addDrawerListener(actionBarDrawerToggle)
+        actionBarDrawerToggle.syncState()
 
 
     }
 
     private fun setToolbar() {
         setSupportActionBar(binding.toolbarMain)
-
 
     }
 }
