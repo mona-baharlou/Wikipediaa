@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
     private fun firstRun() {
         replaceFragment(FragmentExplore())
         binding.bottomNavigationMain.selectedItemId = R.id.menu_explore
+        binding.bottomNavigationMain.setOnItemReselectedListener {}
     }
 
     private fun setMenu() {
