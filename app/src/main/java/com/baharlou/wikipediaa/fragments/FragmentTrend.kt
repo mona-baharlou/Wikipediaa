@@ -8,12 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.baharlou.wikipediaa.DetailActivity
-import com.baharlou.wikipediaa.adapter.ExploreAdapter
+import com.baharlou.wikipediaa.activities.DetailActivity
 import com.baharlou.wikipediaa.adapter.ItemEvent
 import com.baharlou.wikipediaa.adapter.TrendAdapter
 import com.baharlou.wikipediaa.data.ItemPost
-import com.baharlou.wikipediaa.databinding.FragmentProfileBinding
 import com.baharlou.wikipediaa.databinding.FragmentTrendBinding
 
 class FragmentTrend : Fragment(), ItemEvent {

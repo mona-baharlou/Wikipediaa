@@ -1,4 +1,4 @@
-package com.baharlou.wikipediaa
+package com.baharlou.wikipediaa.activities
 
 import android.content.Intent
 import android.net.Uri

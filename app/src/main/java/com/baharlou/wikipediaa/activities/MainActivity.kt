@@ -1,11 +1,11 @@
-package com.baharlou.wikipediaa
+package com.baharlou.wikipediaa.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import com.baharlou.wikipediaa.R
 import com.baharlou.wikipediaa.databinding.ActivityMainBinding
 import com.baharlou.wikipediaa.fragments.FragmentExplore
 import com.baharlou.wikipediaa.fragments.FragmentProfile
