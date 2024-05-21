@@ -10,6 +10,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog
 import com.baharlou.wikipediaa.R
 import com.baharlou.wikipediaa.databinding.ActivityMainBinding
 import com.baharlou.wikipediaa.fragments.FragmentExplore
+import com.baharlou.wikipediaa.fragments.FragmentPhotographer
 import com.baharlou.wikipediaa.fragments.FragmentProfile
 import com.baharlou.wikipediaa.fragments.FragmentTrend
 
@@ -94,10 +95,16 @@ class MainActivity : AppCompatActivity() {
                 R.id.menu_photographer -> {
                     binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
 
+                    val trasactionP = supportFragmentManager.beginTransaction()
+                    trasactionP.add(R.id.frame_main_container , FragmentPhotographer())
+                    trasactionP.addToBackStack(null)
+                    trasactionP.commit()
+
                 }
 
                 R.id.menu_video_maker -> {
                     binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
+
 
                 }
 
