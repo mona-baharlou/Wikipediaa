@@ -123,12 +123,12 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.menu_open_wikimedia -> {
                     binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
-                    openWebsite("https://en.wikipedia.org/wiki/Main_Page")
+                    openWebsite("https://www.wikimedia.org/")
                 }
 
                 R.id.menu_open_wikipedia -> {
                     binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
-                    openWebsite("https://www.wikimedia.org/")
+                    openWebsite("https://en.wikipedia.org/wiki/Main_Page")
                 }
             }
 
