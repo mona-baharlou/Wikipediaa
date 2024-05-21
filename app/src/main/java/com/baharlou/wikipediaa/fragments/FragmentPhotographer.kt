@@ -25,11 +25,11 @@ class FragmentPhotographer : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Glide.with(requireContext())
+        /*Glide.with(requireContext())
             .load(R.drawable.img_photographer)
             .transform(
                 RoundedCornersTransformation(32, 8)
             )
-            .into(binding.imgPhotograph)
+            .into(binding.imgPhotograph)*/
     }
 }
