@@ -1,5 +1,7 @@
 package com.baharlou.wikipediaa.activities
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -8,6 +10,7 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.baharlou.wikipediaa.R
+import com.baharlou.wikipediaa.TranslatorActivity
 import com.baharlou.wikipediaa.databinding.ActivityMainBinding
 import com.baharlou.wikipediaa.fragments.FragmentExplore
 import com.baharlou.wikipediaa.fragments.FragmentPhotographer
@@ -96,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                     binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
 
                     val trasactionP = supportFragmentManager.beginTransaction()
-                    trasactionP.add(R.id.frame_main_container , FragmentPhotographer())
+                    trasactionP.add(R.id.frame_main_container, FragmentPhotographer())
                     trasactionP.addToBackStack(null)
                     trasactionP.commit()
 
@@ -111,23 +114,32 @@ class MainActivity : AppCompatActivity() {
                 R.id.menu_translator -> {
                     binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
 
+                    val intent = Intent(this, TranslatorActivity::class.java)
+                    startActivity(intent)
+
                 }
 
                 ///----------------------------------------------/
 
                 R.id.menu_open_wikimedia -> {
                     binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
-
+                    openWebsite("https://en.wikipedia.org/wiki/Main_Page")
                 }
 
                 R.id.menu_open_wikipedia -> {
-
+                    binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
+                    openWebsite("https://www.wikimedia.org/")
                 }
             }
 
             true
         }
 
+    }
+
+    private fun openWebsite(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
     }
 
     private fun toggleDrawer() {
