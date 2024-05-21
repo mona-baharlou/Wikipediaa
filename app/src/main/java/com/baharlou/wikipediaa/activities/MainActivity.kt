@@ -2,9 +2,11 @@ package com.baharlou.wikipediaa.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.baharlou.wikipediaa.R
 import com.baharlou.wikipediaa.databinding.ActivityMainBinding
 import com.baharlou.wikipediaa.fragments.FragmentExplore
@@ -72,23 +74,42 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.menu_writer -> {
                     binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
+
+                    val dialog = SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+                    dialog.titleText = "Alert! "
+                    dialog.confirmText = "Confirm"
+                    dialog.cancelText = "Cancel"
+                    dialog.contentText = "Wanna be a writer?"
+                    dialog.setOnCancelListener { dialog.dismiss() }
+                    dialog.setConfirmClickListener {
+                        dialog.dismiss()
+                        Toast.makeText(this, "You can be a writer just work !", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+
+                    dialog.show()
                 }
 
+
                 R.id.menu_photographer -> {
+                    binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
 
                 }
 
                 R.id.menu_video_maker -> {
+                    binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
 
                 }
 
                 R.id.menu_translator -> {
+                    binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
 
                 }
 
                 ///----------------------------------------------/
 
                 R.id.menu_open_wikimedia -> {
+                    binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
 
                 }
 
